@@ -1,0 +1,32 @@
+<?php $_menu = $this->getHtml('level-top');?>
+<?php if($_menu): ?>
+<div class="nav-container">
+    <ul id="nav">
+	<?php if(Mage::getStoreConfig('ripples_customenu/ripples_customenu_group/homelink')): ?>
+	<li class="level0 nav-1 level-top first <?php echo (rtrim($this->helper('core/url')->getCurrentUrl(),"/") == rtrim($this->getBaseUrl(),"/"))? 'active':'';?>">
+		<a class="level-top" href="<?php echo $this->getBaseUrl(); ?>">
+		<span>Home</span>
+		</a>
+	</li>
+	<?php endif; ?>
+        <?php echo $_menu ?>
+	<?php
+	$customMenuArray = unserialize(Mage::getStoreConfig('ripples_customenu/ripples_customenu_group/customenu'));
+	if(count($customMenuArray)): 
+	$order = array();
+		foreach($customMenuArray as $k => $d) {
+		  $order[$k] = $d['order'];
+		}	
+		array_multisort($order, SORT_ASC, $customMenuArray);
+		foreach($customMenuArray as $menuItem):
+	?><?php echo rtrim("/",$this->helper('core/url')->getCurrentUrl()); ?>
+	<li class="level0 nav-1 level-top first last <?php echo (rtrim($this->helper('core/url')->getCurrentUrl(),"/") == rtrim($this->getBaseUrl().$menuItem['link'],"/"))? 'active':'';?>">
+		<a class="level-top" href="<?php echo $this->getBaseUrl().$menuItem['link']; ?>">
+		<span><?php echo $menuItem['menutitle'] ?></span>
+		</a>
+	</li>
+	<?php endforeach; ?>
+	<?php endif; ?>
+    </ul>
+</div>
+<?php endif ?>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>Ripples_Customenu</name>
+    <version>1.0.1</version>
+    <stability>stable</stability>
+    <license>GNU General Public License (GPL)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>This module allows you to add custom menu on magento top menu.</summary>
+    <description>This module allows you to add custom menu on magento top menu. You can add home page link as well as multiple custom links to top menu.</description>
+    <notes>Stable Version.</notes>
+    <authors><author><name>Jaimin Sutariya</name><user>jsutariya</user><email>jsutariya@gmail.com</email></author></authors>
+    <date>2014-04-20</date>
+    <time>12:57:43</time>
+    <contents><target name="magecommunity"><dir><dir name="Ripples"><dir name="Customenu"><dir name="Block"><dir name="Adminhtml"><dir name="System"><dir name="Config"><dir name="Form"><dir name="Field"><file name="Additem.php" hash="0026f4a727f8c9bdd5202e60acde3d41"/></dir></dir></dir></dir></dir><dir name="Catalog"><file name="Navigation.php" hash="577eb7491ec8ce03a3638dad85e99dbb"/></dir><file name="Index.php" hash="ff3c9eaa0e9a065dbcb221a78e4b59bc"/></dir><dir name="Helper"><file name="Data.php" hash="e6ade7b746789e47741267e6f3eb569a"/></dir><dir name="controllers"><file name="IndexController.php" hash="50119478f7891bb1aa5226b87b866562"/></dir><dir name="etc"><file name="adminhtml.xml" hash="bc8c80395604473147c8023e5901c516"/><file name="config.xml" hash="813f4fc803cfce828894c40ab6deaf9e"/><file name="system.xml" hash="8f63b52ece7eaad32c74be70bdaccea4"/></dir></dir></dir></dir></target><target name="magedesign"><dir><dir name="frontend"><dir name="default"><dir name="default"><dir name="layout"><file name="customenu.xml" hash="b732e5043a496c53d914453a7f5bf3a9"/></dir><dir name="template"><dir name="customenu"><file name="index.phtml" hash="4e2010039327f4f47c960f1634315d4b"/></dir></dir></dir></dir></dir></dir></target><target name="mageetc"><dir><dir name="modules"><file name="Ripples_Customenu.xml" hash="e50f90aaad7b67d2997adce01b457784"/></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.5.0</max></php></required></dependencies>
+</package>

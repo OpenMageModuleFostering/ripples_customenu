@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<config>
+	  <tabs>
+		<ripples_extensions translate="label" module="customenu">
+            <label>Ripples</label>
+            <sort_order>0</sort_order>
+        </ripples_extensions>
+	  </tabs>
+	  <sections>
+		<ripples_customenu  translate="label" module="customenu">                    
+		<label>Custom Menu</label>
+		<tab>ripples_extensions</tab>
+		<frontend_type>text</frontend_type>
+		<sort_order>0</sort_order>
+		<show_in_default>1</show_in_default>
+		<show_in_website>1</show_in_website>
+		<show_in_store>1</show_in_store>            
+					<groups>
+				      <ripples_customenu_group translate="label"> 
+					  <label>Ripples Custom Menu</label>
+					  <frontend_type>text</frontend_type>
+					  <sort_order>0</sort_order>
+					  <show_in_default>1</show_in_default>
+					  <show_in_website>1</show_in_website>
+					  <show_in_store>1</show_in_store>
+				       <fields>
+                          <enabled translate="label">
+                            <label>Enable</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                          </enabled>
+                          <homelink translate="label">
+                            <label>Add Home Link</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<comment>To add Home page link in menu</comment>
+                          </homelink>
+                          <customenu translate="label">
+                            <label>Custom Menu Links</label>
+							<backend_model>adminhtml/system_config_backend_serialized_array
+							</backend_model>
+							<frontend_model>customenu/adminhtml_system_config_form_field_additem
+							</frontend_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<comment>Custom Menu Links</comment>
+                          </customenu>
+					   </fields>
+					   </ripples_customenu_group>
+					</groups>
+		</ripples_customenu>
+	  </sections>
+</config>

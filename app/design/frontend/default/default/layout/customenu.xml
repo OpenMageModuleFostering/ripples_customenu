@@ -1,0 +1,19 @@
+<?xml version="1.0"?>   
+<layout version="0.1.0">   
+  <customenu_index_index>   
+    <reference name="root">   
+      <action method="setTemplate"><template>page/1column.phtml</template></action>   
+    </reference>   
+    <reference name="content">   
+      <block type="customenu/index" name="customenu_index" template="customenu/index.phtml"/>   
+    </reference>   
+  </customenu_index_index> 
+  <default>
+  <reference name="catalog.topnav">
+		<action method="setTemplate" ifconfig="ripples_customenu/ripples_customenu_group/enabled">
+			<template>customenu/index.phtml</template>
+		</action>
+	</reference>
+	</default>
+</layout>   
+	
