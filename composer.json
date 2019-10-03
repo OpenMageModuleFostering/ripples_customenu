@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Ripples_Customenu",
+    "name": "OpenMageModuleFostering\/Ripples_Customenu",
     "type": "magento-module",
     "license": "GNU-General-Public-License-(GPL)",
     "homepage": "",
     "description": "This module allows you to add custom menu on magento top menu.",
     "authors": [
-    {
-        "name": "Jaimin Sutariya",
-        "email": "jsutariya@gmail.com"
-    }
-],
+        {
+            "name": "Jaimin Sutariya",
+            "email": "jsutariya@gmail.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
